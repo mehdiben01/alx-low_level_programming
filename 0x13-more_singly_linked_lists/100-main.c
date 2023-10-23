@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include "lists.h"
 
+/* Declaration of the reverse_listint function */
+listint_t *reverse_listint(listint_t **head);
+
 /**
  * main - check the code
  *
@@ -22,8 +25,10 @@ int main(void)
     add_nodeint_end(&head, 402);
     add_nodeint_end(&head, 1024);
     print_listint(head);
+    
     reverse_listint(&head);
-    print_listint(head);    
+    print_listint(head);
+    
     free_listint2(&head);
     return (0);
 }
